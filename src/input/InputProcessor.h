@@ -1,0 +1,14 @@
+//
+// Created by liam on 4/10/19.
+//
+
+#ifndef CS_3210_PROJECT_ASSIGNMENT_INPUTPROCESSOR_H
+#define CS_3210_PROJECT_ASSIGNMENT_INPUTPROCESSOR_H
+
+
+class InputProcessor {
+
+};
+
+
+#endif //CS_3210_PROJECT_ASSIGNMENT_INPUTPROCESSOR_H
