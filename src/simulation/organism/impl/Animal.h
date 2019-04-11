@@ -7,7 +7,8 @@
 
 
 class Animal {
-
+private:
+    int maxEnergy;
 };
 
 

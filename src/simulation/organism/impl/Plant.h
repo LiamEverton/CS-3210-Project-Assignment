@@ -7,6 +7,8 @@
 
 
 class Plant {
+private:
+    int regrowthCoefficient;
 
 };
 
