@@ -5,6 +5,7 @@
 #ifndef CS_3210_PROJECT_ASSIGNMENT_ORGANISM_H
 #define CS_3210_PROJECT_ASSIGNMENT_ORGANISM_H
 
+#include <Position.h>
 
 class Organism {
 
@@ -22,18 +23,36 @@ private:
 public:
 
     /**
+     * Constructs a new Organism using the given parameters.
+     * @param id - the organism's id.
+     * @param energy - the organism's energy.
+     * @param position - the organism's current position.
+     */
+    Organism(int id, int energy, Position position) {
+        this->id = id;
+        this->energy = energy;
+        this->position = position;
+    }
+
+    ~Organism() {
+        delete id;
+        delete energy;
+        delete position;
+    }
+
+    /**
      * Moves the organism.
      *
      * @return whether or not the organism successfully moved or not.
      */
-    bool move();
+    virtual bool move();
 
     /**
      * Grows the organism.
      *
      * @return whether or not the organism successfully grew or not.
      */
-    bool grow();
+    virtual bool grow();
 
     /**
      * Consumes the specified organism.
@@ -42,52 +61,42 @@ public:
      *
      * @return whether or not the target organism has been successfully eaten.
      */
-    bool consume(Organism target);
+    virtual bool consume(Organism target);
 
     /**
      * Sets the current energy level.
      *
      * @param energy - the current energy level.
      */
-    void setEnergy(int energy) {
-        this->energy = energy;
-    }
+    virtual void setEnergy(int energy);
 
     /**
      * Sets the organism's current position.
      *
      * @param position - the position to set.
      */
-    void setPosition(Position position) {
-        this->position = position;
-    }
+    virtual void setPosition(Position position);
 
     /**
      * Gets the current energy level.
      *
      * @return energy - the current energy level.
      */
-    int getEnergy() {
-        return this->energy;
-    }
+    virtual int getEnergy();
 
     /**
      * Gets the organism's current position.
      *
      * @return position - the current position.
      */
-    Position getPosition() {
-        return this->position;
-    }
+    virtual Position getPosition();
 
     /**
      * Gets the organism's id.
      *
      * @return id - the organism's id.
      */
-    int getID() {
-        return this->id;
-    }
+    virtual int getID();
 };
 
 
