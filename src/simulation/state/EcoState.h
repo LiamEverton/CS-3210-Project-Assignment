@@ -7,6 +7,10 @@
 
 
 class EcoState {
+private:
+
+
+public:
 
 };
 

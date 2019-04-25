@@ -6,9 +6,20 @@
 #define CS_3210_PROJECT_ASSIGNMENT_PLANT_H
 
 
-class Plant {
+#include <src/simulation/organism/Organism.h>
+
+class Plant : public Organism {
 private:
+
     int regrowthCoefficient;
+
+public:
+
+    Plant(int id, Position &position, int energy, int regrowthCoefficient);
+
+    virtual int getRegrowthCoefficient() = 0;
+
+    virtual void setRegrowthCoefficient(int coefficient) = 0;
 
 };
 

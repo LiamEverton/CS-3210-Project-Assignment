@@ -1,25 +1,25 @@
-//
-// Created by liam on 4/10/19.
-//
-
 #include "Organism.h"
+
+/**
+ * Constructs a new Organism using the given parameters.
+ * @param id - the organism's id.
+ * @param energy - the organism's energy.
+ * @param position - the organism's current position.
+ */
+Organism::Organism(int id, int energy, Position &position) : Entity(id, position) {
+    this->energy = energy;
+}
+
+/**
+ * Deconstructor.
+ */
+Organism::~Organism() {
+}
 
 void Organism::setEnergy(int energy) {
     this->energy = energy;
 }
 
-void Organism::setPosition(Position position) {
-    this->position = position;
-}
-
 int Organism::getEnergy() {
     return this->energy;
-}
-
-Position Organism::getPosition() {
-    return this->position;
-}
-
-int Organism::getID() {
-    return this->id;
 }

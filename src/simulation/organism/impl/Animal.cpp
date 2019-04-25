@@ -3,3 +3,14 @@
 //
 
 #include "Animal.h"
+
+Animal::Animal(int id, int energy, int maxEnergy, Position &position) : Organism(id, energy, position) {
+}
+
+void Animal::setMaxEnergy(int maxEnergy) {
+    this->maxEnergy = maxEnergy;
+}
+
+int Animal::getMaxEnergy() {
+    return this->maxEnergy;
+}
