@@ -7,7 +7,7 @@ https://github.com/uiowa-cs-3210-0001/cs3210-assignments/tree/master/course-proj
 
 -- The program would be able to meet all stretch goals very easily, if given more time to do so.
 
--- Documentation and code comments would taken into consideration for extra credit, even though it wasn't specified in the original rubric.
+-- Documentation and code comments would be taken into consideration for extra credit, even though it wasn't specified in the original rubric.
 
 -- I allowed for unconventional map input by padding the ending, since some text editors remove additional whitespace after a character.
 
