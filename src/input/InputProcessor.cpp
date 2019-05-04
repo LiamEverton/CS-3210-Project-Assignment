@@ -18,7 +18,7 @@ InputProcessor::InputProcessor(list<char> possibleTiles, const string &mapFileNa
     this->speciesFileName = speciesFileName;
 }
 
-char **InputProcessor::readMap(list<Species> *species) {
+char **InputProcessor::readMap(const list<Species> &species) {
     //Calculate the Map's dimensions.
     this->mapWidth = getFileWidth(this->mapFileName);
     this->mapHeight = getFileHeight(this->mapFileName);
@@ -197,7 +197,7 @@ void InputProcessor::saveMap(EcoSystem ecoSystem) {
     mapFile.close();
 }
 
-bool InputProcessor::isValidMapValue(list<Species> *species, const char &mapValue) {
+bool InputProcessor::isValidMapValue(const list<Species> &species, const char &mapValue) {
 
     //Check if it is a possible map tile.
     if (mapValue == ' ' || mapValue == '#' || mapValue == '~') {
@@ -205,7 +205,7 @@ bool InputProcessor::isValidMapValue(list<Species> *species, const char &mapValu
     }
 
     //Check if it is a possible Species.
-    for (Species specie: *species) {
+    for (Species specie: species) {
 
         if (specie.letterID == mapValue) {
             return true;

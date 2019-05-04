@@ -4,7 +4,7 @@
 #include <simulation/ecosystem/entity/impl/organism/impl/plant/Plant.h>
 #include "OrganismFactory.h"
 
-OrganismFactory::OrganismFactory(list<Species> *species) {
+OrganismFactory::OrganismFactory(const list<Species> &species) {
     this->species = species;
 }
 
@@ -12,7 +12,7 @@ const shared_ptr<Organism>
 OrganismFactory::createOrganism(const int &id, const char &letterID, shared_ptr<Position> pos) {
 
     //Iterate over each possible Species.
-    for (const Species &specie : *this->species) {
+    for (const Species &specie : this->species) {
 
         //Check if the species is equal.
         if (specie.letterID == letterID) {

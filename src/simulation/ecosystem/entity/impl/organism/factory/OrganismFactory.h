@@ -11,7 +11,7 @@ class OrganismFactory {
 private:
 
     //The given list of different specie types.
-    list<Species> *species;
+    list<Species> species;
 
 public:
 
@@ -20,7 +20,7 @@ public:
      *
      * @param species - the given list of Species.
      */
-    OrganismFactory(list<Species> *species);
+    OrganismFactory(const list<Species> &species);
 
     /**
      * Creates a new Organism, using the given values.

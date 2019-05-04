@@ -20,9 +20,9 @@ EcoSystem Simulation::createEcoSystem() {
 
     //Read input files.
     list<Species> species = this->inputProcessor.readSpecies();
-    char **map = this->inputProcessor.readMap(&species);
+    char **map = this->inputProcessor.readMap(species);
 
-    OrganismFactory organismFactory = OrganismFactory(&species);
+    OrganismFactory organismFactory = OrganismFactory(species);
     list<shared_ptr<Organism>> organisms;
 
     //Iterate over each possible position in the map.

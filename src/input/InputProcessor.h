@@ -3,6 +3,7 @@
 
 #include <string>
 #include <list>
+#include <memory>
 
 #include <fstream>
 #include <iostream>
@@ -77,7 +78,7 @@ public:
      *
      * @return a two dimensional char pointer array containing read Map values.
      */
-    char **readMap(list<Species> *species);
+    char **readMap(const list<Species> &species);
 
     /**
      * Reads the Species' input file.
@@ -101,7 +102,7 @@ public:
      *
      * @return whether or not the given value is a registered Entity/Tile.
      */
-    bool isValidMapValue(list<Species> *species, const char &mapValue);
+    bool isValidMapValue(const list<Species> &species, const char &mapValue);
 
     /**
      * Calculates the File's width.
